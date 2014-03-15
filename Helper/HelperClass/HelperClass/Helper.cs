@@ -8,9 +8,29 @@ namespace HelperClass
 {
     public class Helper
     {
-        public string FindStr()
+        public string Author()
         {
             return "Prashant Test";
+        }
+        public string ListToCSV(List<string> listToConvert)
+        {
+            string returnString = "";
+            foreach (string item in listToConvert)
+            {
+                returnString = returnString + item + ",";
+            }
+
+            return returnString.Substring(0, returnString.Length - 1);
+        }
+        public List<string> CSVToList(string strCSV)
+        {
+            List<string> returnList = new List<string>();
+            string[] strSplit = strCSV.Split(',');
+            for (int i = 0; i < strSplit.Length; i++)
+            {
+                returnList.Add(strSplit[i]);
+            }
+            return returnList;
         }
     }
 }
