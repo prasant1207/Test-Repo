@@ -23,6 +23,16 @@ namespace TestClient
             int length = csv.Split(',').Length;
 
             List<string> testList2 = helperLib.CSVToList(csv);
+
+            //Sum of Integer List
+
+            List<int> integerList = new List<int>();
+            for (int i = 0; i < length; i++)
+            {
+                integerList.Add(i);
+            }
+
+            long TotalSum = helperLib.SumOfIntList(integerList);
         }
     }
 }

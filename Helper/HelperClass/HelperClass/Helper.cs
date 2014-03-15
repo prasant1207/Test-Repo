@@ -10,7 +10,7 @@ namespace HelperClass
     {
         public string Author()
         {
-            return "Prashant Test";
+            return "Prashant Tiwari";
         }
         public string ListToCSV(List<string> listToConvert)
         {
@@ -31,6 +31,17 @@ namespace HelperClass
                 returnList.Add(strSplit[i]);
             }
             return returnList;
+        }
+
+        public int SumOfIntList(List<int> listToCount)
+        {
+            int totalSum = 0;
+            foreach (int item in listToCount)
+            {
+                totalSum = totalSum +item;
+            }
+
+            return totalSum;
         }
     }
 }
